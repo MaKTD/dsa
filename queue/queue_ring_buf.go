@@ -1,5 +1,7 @@
 package queue
 
+// original code https://github.com/eapache/queue/blob/main/v2/queue.go
+
 const minSizeToCollapse = 16
 
 type Queue[T any] struct {
