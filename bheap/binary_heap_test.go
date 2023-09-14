@@ -183,3 +183,10 @@ func TestBinaryHeap_Poll(t *testing.T) {
 	require.Equal(t, false, ok)
 	require.Equal(t, Elem(0), min)
 }
+
+func TestNew(t *testing.T) {
+	elems := []Elem{10, 2, 5, 2, 0, 10, 20, -1, 8, 19, 1, 1}
+	h := New(elems...)
+
+	require.Equal(t, []Elem{-1, 0, 1, 2, 1, 5, 20, 10, 8, 19, 2, 10}, h.data)
+}

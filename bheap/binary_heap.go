@@ -69,3 +69,13 @@ func (r *BinaryHeap[T]) siftDown(i int) {
 		}
 	}
 }
+
+func New[T BinaryHeapElement[T]](elems ...T) BinaryHeap[T] {
+	h := BinaryHeap[T]{}
+
+	for _, v := range elems {
+		h.Add(v)
+	}
+
+	return h
+}
