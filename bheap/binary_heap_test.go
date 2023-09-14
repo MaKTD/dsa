@@ -1,7 +1,6 @@
 package bheap
 
 import (
-	"fmt"
 	"github.com/stretchr/testify/require"
 	"testing"
 )
@@ -75,7 +74,6 @@ func TestBinaryHeapSiftDown(t *testing.T) {
 		data: []Elem{50, 8, 16, 20, 21, 18, 20, 41, 33},
 	}
 	h.siftDown(0)
-	fmt.Printf("%+v\n", h)
 	require.Equal(t, []Elem{8, 20, 16, 33, 21, 18, 20, 41, 50}, h.data)
 }
 
@@ -111,7 +109,6 @@ func TestHeap_Add(t *testing.T) {
 
 	h.Add(0)
 	require.Equal(t, []Elem{0, 1, 5, 2, 1, 20, 50, 10, 4, 3}, h.data)
-	fmt.Printf("%+v\n", h)
 
 	h.Add(13)
 	require.Equal(t, []Elem{0, 1, 5, 2, 1, 20, 50, 10, 4, 3, 13}, h.data)
