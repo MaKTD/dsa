@@ -190,3 +190,10 @@ func TestNew(t *testing.T) {
 
 	require.Equal(t, []Elem{-1, 0, 1, 2, 1, 5, 20, 10, 8, 19, 2, 10}, h.data)
 }
+
+func TestHeapify(t *testing.T) {
+	elems := []Elem{10, 2, 5, 2, 0, 10, 20, -1, 8, 19, 1, 1}
+	h := Heapify(elems)
+
+	require.Equal(t, []Elem{-1, 0, 1, 2, 1, 5, 20, 2, 8, 19, 10, 10}, h.data)
+}

@@ -79,3 +79,15 @@ func New[T BinaryHeapElement[T]](elems ...T) BinaryHeap[T] {
 
 	return h
 }
+
+func Heapify[T BinaryHeapElement[T]](slice []T) BinaryHeap[T] {
+	h := BinaryHeap[T]{
+		data: slice,
+	}
+
+	for i := len(h.data)/2 - 1; i >= 0; i-- {
+		h.siftDown(i)
+	}
+
+	return h
+}
