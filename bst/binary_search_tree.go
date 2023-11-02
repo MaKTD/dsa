@@ -12,7 +12,8 @@ const (
 )
 
 type Comparable[T any] interface {
-	// Compare Equal = 0, Positive = greater, Negative = lesser
+	// Compare
+	// Equal = 0, Positive > 0, Negative < 0
 	Compare(another T) int
 }
 
