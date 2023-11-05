@@ -1,4 +1,4 @@
-package avltree
+package treap
 
 import (
 	"fmt"
@@ -31,7 +31,7 @@ func getHeightOfTree[T Comparable[T]](root *node[T]) int {
 	}
 }
 
-func PrintTree[T Comparable[T]](tree UniqAvlTree[T]) {
+func PrintTree[T Comparable[T]](tree UniqTreap[T]) {
 	treeLevel := []*node[T]{tree.root}
 	temp := make([]*node[T], 0)
 	counter := 0
